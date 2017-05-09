@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching Quran</title>
+    <!-- Core CSS - Include with every page -->
+    <link href="assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
+   <link href="assets/css/style.css" rel="stylesheet" />
+      <link href="assets/css/main-style.css" rel="stylesheet" />
+</head>
+
+<body class="body-Login-back">
+    <div class="container">
+       	<div class="row">
+       		<div class="col-md-4 col-md-offset-4 text-center logo-margin ">
+              <img src="assets/img/logo.png" alt=""/>
+                </div>
+            <div class="col-md-4 col-md-offset-4">
+                 <!--  Modals-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Select Role
+                    </div>
+                    <div class="panel-body">
+                    	<div style="">
+                    		<center>
+		                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#logTeacher">
+		                            I'm a Teacher
+		                        </button> 
+		                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#logStudent">
+		                            I'm a Student
+		                        </button>
+	                        </center>
+	                    </div>
+
+	                    <!-- for Teacher Login -->
+                        <div class="modal fade" id="logTeacher" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">                                    
+                                    <div class="col-md-7 col-md-offset-4">
+						                <div class="login-panel panel panel-default">                  
+						                    <div class="panel-heading">
+						                        <h3 class="panel-title">Please Sign In</h3>
+						                    </div>
+						                    <div class="panel-body">
+						                        <form action="" method="POST">
+						                            <fieldset>
+						                                <div class="form-group">
+						                                    <input class="form-control" placeholder="ID Number" name="id_num" type="text" pattern="[0-9]+" required="required" autofocus>
+						                                </div>
+						                                <div class="form-group">
+						                                    <input class="form-control" placeholder="Password" name="password" type="password" value="" required="required">
+						                                </div>		
+						                                <input type="hidden" name="role" value="100">						                                
+						                                <input type="hidden" name="indicator" value="1">				                                
+						                                <!-- Change this to a button or input when using this as a form -->
+						                               <button type='submit' class="btn btn-lg btn-success btn-block">Login</button>
+						                            </fieldset>
+						                        </form>
+						                        <div class="text-center">
+											        <ul class="list-inline">											            											            
+											            <li><a class="text-muted" href="#" onclick="showSignup('Teacher')">Signup</a></li>
+											        </ul>
+											    </div>
+						                    </div>
+						                </div>
+						            </div>
+                                </div>                                
+                            </div>
+                        </div>
+
+                         <!-- for Student Login -->
+                        <div class="modal fade" id="logStudent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">                                    
+                                    <div class="col-md-7 col-md-offset-4">
+						                <div class="login-panel panel panel-default">                  
+						                    <div class="panel-heading">
+						                        <h3 class="panel-title">Please Sign In</h3>
+						                    </div>
+						                    <div class="panel-body">
+						                        <form role="form">
+						                            <fieldset>
+						                                <div class="form-group">
+						                                    <input class="form-control" placeholder="ID Number" name="id_num" type="text" pattern="[0-9]+" required="required" autofocus>
+						                                </div>
+						                                <div class="form-group">
+						                                    <input class="form-control" placeholder="Password" name="password" type="password" value="" required="required">
+						                                </div>						                                
+						                                <!-- Change this to a button or input when using this as a form -->
+						                                <input type="hidden" name="role" value="50">
+						                                <input type="hidden" name="indicator" value="1">
+						                                <button type='submit' class="btn btn-lg btn-success btn-block">Login</button>
+						                            </fieldset>
+						                        </form>
+						                         <div class="text-center">
+											        <ul class="list-inline">											            											            
+											            <li><a class="text-muted" href="#" onclick="showSignup('Student')">Signup</a></li>											           
+											        </ul>
+											    </div>
+						                    </div>
+						                </div>
+						            </div>
+                                </div>                                
+                            </div>
+                        </div>
+
+                        <!-- for Student Signup -->
+                        <div class="modal fade " id="signupStudent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">                                    
+                                    <div class="col-md-7 col-md-offset-4">
+						                <div class="login-panel panel panel-default">                  
+						                    <div class="panel-heading">
+						                        <h3 class="panel-title">Please Signup</h3>
+						                    </div>
+						                    <div class="panel-body">
+						                        <form role="form">
+						                            <fieldset>
+						                                <div class="form-group">
+						                                    <input class="form-control" placeholder="Name" name="name" type="text" required="required" autofocus>
+						                                </div>
+						                                 <div class="form-group">
+						                                    <input class="form-control" placeholder="ID Number" name="id_num" type="text" pattern="[0-9]+" required="required" autofocus>
+						                                </div>
+						                                <div class="form-group">
+						                                    <input class="form-control" placeholder="Password" name="password" type="password" required="required" value="">
+						                                </div>	
+						                                <div class="form-group">
+						                                    <input class="form-control" placeholder="Re-Password" name="re-password" type="password" required="required" value="">
+						                                </div>						                                
+						                                <!-- Change this to a button or input when using this as a form -->
+						                                <input type="hidden" name="role" value="50">
+						                                <input type="hidden" name="indicator" value="2">
+						                                <button type='submit' class="btn btn-lg btn-success btn-block">Signup</button>
+						                            </fieldset>
+						                        </form>
+						                         <div class="text-center">
+											        <ul class="list-inline">											            											            
+											            <li><a class="text-muted" href="#" onclick="showLogin('Student')">Login</a></li>
+											        </ul>
+											    </div>
+						                    </div>
+						                </div>
+						            </div>
+                                </div>                                
+                            </div>
+                        </div>
+
+                          <!-- for Teacher Signup -->
+                        <div class="modal fade " id="signupTeacher" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">                                    
+                                    <div class="col-md-7 col-md-offset-4">
+						                <div class="login-panel panel panel-default">                  
+						                    <div class="panel-heading">
+						                        <h3 class="panel-title">Please Signup</h3>
+						                    </div>
+						                    <div class="panel-body">
+						                        <form role="form">
+						                            <fieldset>
+						                                 <div class="form-group">
+						                                    <input class="form-control" placeholder="Name" name="name" type="text" required="required" autofocus>
+						                                </div>
+						                                 <div class="form-group">
+						                                    <input class="form-control" placeholder="ID Number" name="id_num" type="text" pattern="[0-9]+" required="required" autofocus>
+						                                </div>
+						                                <div class="form-group">
+						                                    <input class="form-control" placeholder="Password" name="password" type="password" required="required" value="">
+						                                </div>	
+						                                <div class="form-group">
+						                                    <input class="form-control" placeholder="Re-Password" name="re-password" type="password" required="required" value="">
+						                                </div>						                                
+						                                <!-- Change this to a button or input when using this as a form -->
+						                                <input type="hidden" name="role" value="50">
+						                                <input type="hidden" name="indicator" value="2">
+						                                <button type='submit' class="btn btn-lg btn-success btn-block">Signup</button>
+						                            </fieldset>
+						                        </form>
+						                         <div class="text-center">
+											        <ul class="list-inline">											            											            
+											            <li><a class="text-muted" href="#" onclick="showLogin('Teacher')">Login</a></li>
+											        </ul>
+											    </div>
+						                    </div>
+						                </div>
+						            </div>
+                                </div>                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                 <!-- End Modals-->
+            </div>
+        </div>
+    </div>
+
+
+<?php
+
+include ('functions.php');
+
+?>
+
+
+
+
+<script type="text/javascript">
+   function showSignup(role) {
+		$('#login' + role).modal('hide'); 
+		$('#signup' + role).modal('show');    
+   }
+   function showLogin(role) {
+   		$('#signup' + role).modal('hide');    
+		$('#login' + role).modal('show'); 		
+   }
+</script>
+
+
+
+     <!-- Core Scripts - Include with every page -->
+    <script src="assets/plugins/jquery-1.10.2.js"></script>
+    <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+ 	
+</body>
+
+</html>
